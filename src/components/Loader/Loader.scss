@@ -1,0 +1,40 @@
+@use '../../styles/vars';
+
+@keyframes css-loader-circle {
+	from {
+			-webkit-transform: translateZ(0) rotate(0deg);
+			transform: translateZ(0) rotate(0deg)
+	}
+	to {
+			-webkit-transform: translateZ(0) rotate(360deg);
+			transform: translateZ(0) rotate(360deg)
+	}
+}
+.loader {
+	width: 2em;
+  height: 2em;
+  position: relative;
+	margin: auto;
+  $loader-color: vars.$red;
+  $loader-width: 2em;
+  $loader-size: 3px;
+  $loader-type: dashed; 
+  &:after {
+    content: ' ';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -($loader-width/2);
+    margin-top: -($loader-width/2);
+    width: $loader-width;
+    height: $loader-width;
+    border: $loader-size $loader-type transparent;
+    border-left-color: $loader-color;
+    border-top-color: $loader-color;
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-animation: css-loader-circle 1s linear infinite;
+    animation: css-loader-circle 1s linear infinite;
+  }
+}

@@ -1,0 +1,24 @@
+@use '../../styles/vars';
+
+.app {
+	margin: 24px auto;
+	&__logo {
+		margin: 0 0 0 5px;
+
+	}
+	&__header {
+		.container {
+			display: flex;
+			justify-content: space-between;
+			font-size: 16px;
+			text-transform: uppercase;
+		}
+		
+		.info-btn {
+			width: 24px;
+			height: 24px;
+			background: url('../../../assets/icons/info.svg');
+			border: none;
+		}
+	}
+}

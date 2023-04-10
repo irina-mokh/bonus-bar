@@ -1,8 +1,9 @@
 @use './vars';
+@import "https://fonts.fontstorage.com/import/opensans.css";
 
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', Arial, sans-serif;
 }
 
 * {
@@ -22,4 +23,10 @@ body {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  max-width: 600px;
+	padding: 0 20px;
+  margin: 0 auto;
 }
