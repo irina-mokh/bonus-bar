@@ -1,5 +1,4 @@
-// "currentQuantity":150,"forBurningQuantity":150,"dateBurning":"2024-02-27T18:18:00"
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { BonusInfo } from '../../types';
 import { HOST, axiosClient } from '../../utils/axios';
 import { Loader } from '../Loader';
@@ -25,6 +24,7 @@ export const BonusBar = () => {
 
     fetchData();
   }, [token]);
+
   const { currentQuantity, forBurningQuantity, dateBurning } = bonus;
   return (
     <section className="bonus">
@@ -48,7 +48,7 @@ export const BonusBar = () => {
                   </>
                 )}
               </p>
-              <a href="/details" className="details-btn"></a>
+              <a href="/details" target="_blank" className="details-btn"></a>
             </>
           )}
         </div>

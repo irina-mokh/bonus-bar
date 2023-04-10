@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { axiosClient, clientID, deviceID, HOST } from '../../utils/axios';
 import { BonusBar } from '../BonusBar';
 
@@ -24,7 +24,7 @@ function App() {
       <header className="app__header">
         <div className="container">
           <p className="app__logo">логотип</p>
-          <button className="info-btn"></button>
+          <button className="info-btn" aria-label="info"></button>
         </div>
       </header>
       <BonusBar />
